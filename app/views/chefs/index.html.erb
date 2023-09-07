@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+
+<h1>Chefs</h1>
+
+<div id="chefs">
+<table class="table table-warning table-striped">
+  <thead>
+   <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>specialty</th>
+    <th>View</th>
+   </tr>
+ </thead>
+<% @chefs.each do |chef| %>
+
+<tbody> 
+   <tr>
+    <td><%= chef.name %></td>
+    <td><%= chef.email %></td>
+    <td><%= chef.phone %></td>
+    <td><%= chef.specialty %></td>
+    
+   </tr>
+  </tbody>
+  <% end %>
+  </table>
+</div>
+
+
+<%= link_to "New chef", new_chef_path %>

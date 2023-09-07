@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+
+<h1>Platos</h1>
+
+<div id="dish">
+<table class="table table-warning table-striped">
+  <thead>
+   <tr>
+    <th>Name</th>
+    <th>Precio</th>
+    <th>Descripciòn</th>
+    <th>View</th>
+   </tr>
+ </thead>
+<% @dishes.each do |dish| %>
+
+<tbody> 
+   <tr>
+    <td><%= dish.name %></td>
+    <td><%= dish.price %></td>
+    <td><%= dish.description %></td>
+        
+   </tr>
+  </tbody>
+  <% end %>
+  </table>
+</div>
+
+
+
+
+<%= link_to "New dish", new_dish_path %>
